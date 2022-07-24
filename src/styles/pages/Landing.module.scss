@@ -1,0 +1,6 @@
+@import "../mixins.scss";
+
+.landingContainer {
+    @include customFlex(column, center, space-between);
+    @include customHeightWidth(100%, 100%);
+}

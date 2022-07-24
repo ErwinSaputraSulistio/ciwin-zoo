@@ -1,0 +1,9 @@
+@import "../../../mixins.scss";
+
+.mainContainer {
+    @include customFlex(column, center, center);
+    @include customHeightWidth(100%, 70%);
+}
+
+@media(min-width: 768px) { .mainContainer { margin: 5% 0; } }
+@media(max-width: 768px) { .mainContainer { margin-top: 20%; } }

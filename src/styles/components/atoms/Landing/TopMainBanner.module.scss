@@ -1,0 +1,68 @@
+@import "../../../mixins.scss";
+
+.topMainBanner {
+    @include customFlex(column, center, center);
+}
+.topMainBannerText {
+    @include customFlex(column, none, none);
+    background: #313466;
+    width: 100%;
+}
+.topMainBannerLogo {
+    @include customFlex(row, center, center);
+    background: #A980F8;
+    border-radius: 50%;
+    position: absolute;
+}
+.topMainBannerTitle { opacity: 0.9; }
+.topMainBannerInformation {
+    opacity: 0.7;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+@media(min-width: 768px) {
+    .topMainBanner { @include customHeightWidth(auto, 30%); }
+    .topMainBannerImage { @include customHeightWidth(15vw, 100%); }
+    .topMainBannerText { height: 20vw; }
+    .topMainBannerLogo {
+        @include customHeightWidth(4.7vw, 4.7vw);
+        margin-left: 1.7vw;
+        margin-top: -2.5vw;
+    }
+    .topMainBannerTitle { 
+        @include customText(white, "Ubuntu", 1.4vw, 700, 1.6vw);
+        margin-left: 1.7vw;
+        margin-top: 4vw;
+    }
+    .topMainBannerInformation {
+        @include customText(white, "Ubuntu", 0.9vw, 400, 1.3vw);
+        margin: 1.7vw;
+    }
+}
+
+@media(max-width: 768px) {
+    .topMainBanner { 
+        @include customHeightWidth(auto, 100%);
+        border-radius: 10vw;
+        margin: 20% 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .topMainBannerImage { @include customHeightWidth(50vw, 100%); }
+    .topMainBannerText { height: 70vw; }
+    .topMainBannerLogo {
+        @include customHeightWidth(15vw, 15vw);
+        margin-left: 5vw;
+        margin-top: -7vw;
+    }
+    .topMainBannerTitle { 
+        @include customText(white, "Ubuntu", 5.5vw, 700, 1.6vw);
+        margin-left: 5vw;
+        margin-top: 15vw;
+    }
+    .topMainBannerInformation {
+        @include customText(white, "Ubuntu", 3.5vw, 400, 100%);
+        margin: 7.5vw 5vw;
+    }
+}

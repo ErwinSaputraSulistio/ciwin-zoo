@@ -1,0 +1,12 @@
+@import "../../../mixins.scss";
+
+.bottomMain, .bottomMainBanner { @include customFlex(column, center, center); }
+
+@media(min-width: 768px) { .bottomMain { width: 100%; } }
+@media(max-width: 768px) {
+    .bottomMain {
+        background: linear-gradient(to bottom right, #613476 30%, #141D6B 70%);
+        border-radius: 10vw 10vw 0 0;
+        width: 100vw;
+    }
+}

@@ -1,0 +1,6 @@
+@import "../mixins.scss";
+
+.notFoundContainer {
+    @include customFlex(row, center, center);
+    @include customHeightWidth(100vh, 100vw);
+}

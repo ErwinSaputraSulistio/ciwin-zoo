@@ -1,0 +1,8 @@
+@import "../../../mixins.scss";
+
+.topMain {
+    @include customFlex(column, center, center);
+    @include customHeightWidth(auto, 100%);
+}
+
+@media(max-width: 768px) { .topMain { margin-bottom: 10%; } }

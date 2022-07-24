@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin");
+
+@mixin customFlex($flexDirection, $alignItems, $justifyContent) {
+    display: flex;
+    flex-direction: $flexDirection;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+@mixin customHeightWidth($height, $width) {
+    height: $height;
+    width: $width;
+}
+@mixin customText($color, $fontFamily, $fontSize, $fontWeight, $lineHeight) {
+    color: $color;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+}

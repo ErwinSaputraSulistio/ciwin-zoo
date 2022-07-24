@@ -1,0 +1,13 @@
+@import "../../../mixins.scss";
+
+.topMainBannerIcon { color: white; }
+
+@media(min-width: 768px) { 
+    .topMainBannerList { 
+        @include customFlex(row, none, space-between);
+        margin: 5% 0;
+        width: 100%;
+    }
+    .topMainBannerIcon { font-size: 1.5vw; }
+}
+@media(max-width: 768px) { .topMainBannerList { margin: 0; } }

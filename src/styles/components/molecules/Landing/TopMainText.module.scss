@@ -1,0 +1,39 @@
+@import "../../../mixins.scss";
+
+.topMainTextInformation {
+    opacity: 0.7;
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .topMainTextCreate {
+        @include customText(#7B6EE3, "Ubuntu", 0.8vw, 500, 1vw);
+    }
+    .topMainTextTitle {
+        @include customText(#313466, "Ubuntu", 2.5vw, 700, 2.7vw);
+        margin: 1.5vw 0;
+    }
+    .topMainTextInformation {
+        @include customText(#313466, "Ubuntu", 1.1vw, 400, 1.5vw);
+        width: 41vw;
+    }
+}
+
+@media(max-width: 768px) {
+    .topMainTextCreate {
+        @include customText(#7B6EE3, "Ubuntu", 3.5vw, 700, 1vw);
+    }
+    .topMainTextTitle {
+        @include customText(#313466, "Ubuntu", 5.5vw, 700, 2.7vw);
+        border-top: 1px solid #313466;
+        border-bottom: 1px solid #313466;
+        margin: 7.5vw 0;
+        padding: 5vw;
+        text-align: center;
+        width: 50%;
+    }
+    .topMainTextInformation {
+        @include customText(#313466, "Ubuntu", 3.5vw, 400, 5.5vw);
+        width: 100%;
+    }
+}

@@ -1,0 +1,114 @@
+@import "../../../mixins.scss";
+
+.headerContainer {
+    @include customFlex(row, center, center);
+    @include customHeightWidth(100vh, 100%);
+    background: linear-gradient(to bottom right, #613476 30%, #141D6B 70%);
+    color: white;
+}
+
+.headerMain {
+    @include customFlex(column, center, space-between);
+}
+.headerText {
+    @include customFlex(column, none, none);
+}
+.headerDot {
+    @include customFlex(row, center, center);
+}
+.headerDotUnclicked, .headerDotClicked {
+    border-radius: 50%;
+}
+.headerDotUnclicked {
+    background: linear-gradient(180deg, #AA80F9 0%, #756CE0 100%);
+    opacity: 0.4;
+}
+.headerDotClicked {
+    background: white;
+    transform: scale(1.1);
+}
+// HEADER BUTTONS HOVER ANIMATION
+.headerArrow, .headerDotClicked, .headerDotUnclicked {
+    transition: 0.25s;
+}
+.headerArrow:hover, .headerDotUnclicked:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.1);   
+}
+
+// COMPUTER/LAPTOP SCREEN
+@media(min-width: 768px) {
+    .headerArrow {
+        font-size: 2.5vw;
+    }
+    .headerMain {
+        margin: 2.6vw;
+    }
+    .headerBanner {
+        @include customFlex(row, center, space-between);
+        margin-top: -2.5vw;
+        width: 68vw;
+    }
+    .headerText {
+        width: 29vw;
+    }
+    .headerTitle {
+        @include customText(white, "Poppins", 2.5vw, 800, 120%);
+    }
+    .headerInformation {
+        @include customText(#D7D7D7, "Poppins", 1vw, 300, 1.3vw);
+        margin-top: 1.7vw;
+    }
+    .headerImage {
+        margin-bottom: 3vw;
+        width: 34.5vw;
+    }
+    .headerDotUnclicked, .headerDotClicked {
+        height: 0.6vw;
+        margin: 0 0.2vw;
+        width: 0.6vw;
+    }
+}
+
+// MOBILE SCREEN
+@media(max-width: 768px) {
+    .headerContainer {
+        @include customHeightWidth(110vh, 100%);
+        border-radius: 0 0 10vw 10vw;
+    }
+    .headerArrow {
+        font-size: 10vw;
+    }
+    .headerMain {
+        margin: 2.6vw;
+    }
+    .headerBanner {
+        @include customFlex(column, center, center);
+        margin-top: -2.5vw;
+        width: 75vw;
+    }
+    .headerText {
+        order: 2;
+        margin-bottom: 15vw;
+        text-align: center;
+        width: 80%;
+    }
+    .headerTitle {
+        @include customText(white, "Poppins", 5.5vw, 800, 150%);
+    }
+    .headerInformation {
+        @include customText(#D7D7D7, "Poppins", 3.5vw, 300, 150%);
+        margin-top: 5.5vw;
+    }
+    .headerImage {
+        order: 1;
+        margin-bottom: 15vw;
+        width: 88%;
+    }
+    .headerDotUnclicked, .headerDotClicked {
+        height: 3vw;
+        margin: 0 1vw;
+        width: 3vw;
+    }
+}

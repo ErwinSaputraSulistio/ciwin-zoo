@@ -1,0 +1,65 @@
+@import "../../../mixins.scss";
+
+.bottomMainBanner { width: 100%; }
+.bottomMainBannerThirdText { 
+    text-align: center;
+    width: 75%;
+}
+
+@media(min-width: 768px) {
+    .bottomMainBanner {
+        @include customFlex(row, center, center);
+    }
+    .bottomMainBannerImage, .bottomMainBannerText {
+        width: 50%;
+    }
+    .bottomMainBannerText { 
+        @include customFlex(column, center, center); 
+    }
+    .bottomMainBannerFirstText {
+        @include customText(#7B6EE3, "Ubuntu", 0.8vw, 500, 1vw);
+    }
+    .bottomMainBannerSecondText { 
+        @include customText(#313466, "Ubuntu", 2vw, 700, 2.7vw);
+        margin: 1vw 0;
+    }
+    .bottomMainBannerThirdText {
+        @include customText(#313466, "Ubuntu", 1vw, 400, 1.5vw);
+        margin-bottom: 5%;
+        width: 75%;
+    }
+}
+
+@media(max-width: 768px) {
+    .bottomMainBanner {
+        @include customFlex(column, center, center);
+        border-radius: 5vw;
+        margin-bottom: 10vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 72%;
+    }
+    .bottomMainBannerImage, .bottomMainBannerText {
+        width: 100%;
+    }
+    .bottomMainBannerImage { order: 1; }
+    .bottomMainBannerText {
+        @include customFlex(column, center, none);
+        background: white;
+        height: 70vw;
+        padding-top: 15%;
+        order: 2;
+    }
+    .bottomMainBannerFirstText {
+        @include customText(#7B6EE3, "Ubuntu", 2.5vw, 500, 1vw);
+    }
+    .bottomMainBannerSecondText { 
+        @include customText(#313466, "Ubuntu", 5.5vw, 700, 2.7vw);
+        margin: 10% 0;
+    }
+    .bottomMainBannerThirdText {
+        @include customText(#313466, "Ubuntu", 3.5vw, 400, 150%);
+        margin-bottom: 5%;
+        width: 75%;
+    }
+}
